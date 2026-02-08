@@ -1,0 +1,27 @@
+Removed Pin From Net: NetName=ESP_EN Pin=R4-2
+Removed Pin From Net: NetName=ESP_IO0 Pin=RED_BOOT-2
+Removed Member From Class: ClassName=Schematic Member=RED_BOOT
+Added Component: Designator=LED_BOOT(LED_VLMS1300-GS08)
+Add component (AddParameter): Name = "Availability"; Value = "Unavailable"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "VLMS1300-GS08"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Price"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=LED_RST(LED_VLMS1300-GS08)
+Add component (AddParameter): Name = "Availability"; Value = "Unavailable"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "VLMS1300-GS08"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Price"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Pin To Net: NetName=ESP_IO0 Pin=LED_BOOT-C
+Added Pin To Net: NetName=ESP_EN Pin=LED_RST-C
+Added Pin To Net: NetName=NetLED_BOOT_A Pin=LED_BOOT-A
+Added Pin To Net: NetName=NetLED_BOOT_A Pin=R3-2
+Added Net: Name=NetLED_BOOT_A
+Added Pin To Net: NetName=NetLED_RST_A Pin=LED_RST-A
+Added Pin To Net: NetName=NetLED_RST_A Pin=R4-2
+Added Net: Name=NetLED_RST_A
+Added Member To Class: ClassName=Schematic Member=Component LED_BOOT VLMS1300-GS08
+Added Member To Class: ClassName=Schematic Member=Component LED_RST VLMS1300-GS08

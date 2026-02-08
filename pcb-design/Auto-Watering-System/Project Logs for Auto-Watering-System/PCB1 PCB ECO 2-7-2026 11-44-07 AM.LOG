@@ -1,0 +1,28 @@
+Removed Pin From Net: NetName=GND Pin=LED RED-2
+Removed Pin From Net: NetName=ESP_IO39 Pin=RED_OUT-2
+Removed Member From Class: ClassName=Schematic Member=LED RED
+Removed Member From Class: ClassName=Schematic Member=RED_OUT
+Added Component: Designator=LED_OUT(LED_VLMS1300-GS08)
+Add component (AddParameter): Name = "Availability"; Value = "Unavailable"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "VLMS1300-GS08"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Price"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=LED_PUMP(LED_VLMS1300-GS08)
+Add component (AddParameter): Name = "Availability"; Value = "Unavailable"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "VLMS1300-GS08"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Price"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Pin To Net: NetName=ESP_IO39 Pin=LED_OUT-C
+Added Pin To Net: NetName=GND Pin=LED_PUMP-C
+Added Pin To Net: NetName=NetLED_OUT_A Pin=LED_OUT-A
+Added Pin To Net: NetName=NetLED_OUT_A Pin=R6-1
+Added Net: Name=NetLED_OUT_A
+Added Pin To Net: NetName=NetLED_PUMP_A Pin=LED_PUMP-A
+Added Pin To Net: NetName=NetLED_PUMP_A Pin=R10-1
+Added Net: Name=NetLED_PUMP_A
+Added Member To Class: ClassName=Schematic Member=Component LED_OUT VLMS1300-GS08
+Added Member To Class: ClassName=Schematic Member=Component LED_PUMP VLMS1300-GS08

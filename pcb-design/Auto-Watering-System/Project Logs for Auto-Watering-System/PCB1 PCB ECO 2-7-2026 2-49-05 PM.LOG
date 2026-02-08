@@ -1,0 +1,10 @@
+Removed Pin From Net: NetName=ESP_IO39 Pin=LED_OUT-C
+Removed Pin From Net: NetName=ESP_IO39 Pin=LM393-1
+Change Component Designator: OldDesignator=Rain NewDesignator=Rain_Sen
+Change Component Designator: OldDesignator=Soil NewDesignator=Soil_Sen
+Change Component Designator: OldDesignator=Temp NewDesignator=Temp_Sen
+Change Component Designator: OldDesignator=Water NewDesignator=Water_Sen
+Added Pin To Net: NetName=ESP_IO33 Pin=LED_OUT-C
+Added Pin To Net: NetName=ESP_IO33 Pin=LM393-1
+Added Pin To Net: NetName=ESP_IO33 Pin=MCU-9
+Added Net: Name=ESP_IO33

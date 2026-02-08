@@ -1,0 +1,5 @@
+Change Component Description : Designator=F530S Old Description=RoHS Compliant New Description=RoHS Compliant | Low RDS(on) | Industry-leading quality | Dynamic dv/dt Rating | Fast Switching | Fully Avalanche Rated | 175C Operating Temperature | P-Channel MOSFET
+Added Pin To Net: NetName=VDD_3.3V Pin=C5-1
+Added Pin To Net: NetName=VDD_3.3V Pin=C6-1
+Added Pin To Net: NetName=GND Pin=F530S-4
+Added Pin To Net: NetName=VDD_3.3V Pin=MCU-2
