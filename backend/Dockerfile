@@ -1,15 +1,18 @@
-FROM node:20-alpine
+FROM node:18-alpine
 
-WORKDIR /app
+RUN npm install -g nodemon
+
+WORKDIR /usr/src/app
 
 COPY package*.json ./
 
-RUN npm install
+RUN npm install --quiet
 
 COPY . .
 
-EXPOSE 3001
+RUN chown -R node:node /usr/src/app
+USER node
 
-ENV PORT=3001
+EXPOSE 5000
 
-CMD ["npm", "start"]
+CMD ["nodemon", "src/app.js"]
