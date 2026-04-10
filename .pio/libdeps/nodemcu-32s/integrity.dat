@@ -1,0 +1,6 @@
+bblanchon/ArduinoJson @ ^7
+LCD
+PubSubClient
+DHT22
+adafruit/DHT sensor library
+adafruit/Adafruit Unified sensor

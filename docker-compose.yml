@@ -1,41 +1,56 @@
-version: '3.8'
 
 services:
   # MQTT Broker (HiveMQ or Mosquitto)
   mqtt-broker:
-    image: eclipse-mosquitto:2.0
-    container_name: mqtt-broker
-    ports:
-      - "1883:1883"    # MQTT protocol
-      - "9001:9001"    # WebSocket
+    build:
+      context:  ./mqtt
+      dockerfile: Dockerfile
+    container_name: mosquitto-broker
+    restart: always
     volumes:
-      - ./mqtt-config:/mosquitto/config
-      - ./mqtt-data:/mosquitto/data
-    environment:
-      - MOSQUITTO_CONFIG_PATH=/mosquitto/config/mosquitto.conf
+      - ./mqtt/config:/mosquitto/config
+      - ./mqtt/data:/mosquitto/data
+      - ./mqtt/log:/mosquitto/log
+    ports:
+      - "1883:1883"
+      - "9001:9001"
     networks:
-      - watering-network
+      - watering_network
+
 
   # Backend server
   backend:
-    build: ./backend
-    container_name: watering-backend
-    ports:
-      - "3001:3001"
-    environment:
-      - PORT=3001
-      - NODE_ENV=production
-      - MQTT_SERVER=mqtt-broker
-      - MQTT_PORT=1883
+    build: 
+      context: ./backend
+    container_name: auto_watering_backend
+    restart: unless-stopped
     depends_on:
+      - mysql-db
       - mqtt-broker
     networks:
-      - watering-network
+      - watering_network 
+    env_file: ./backend/.env
+
+  mysql-db:
+    image: mysql:8.0
+    container_name: auto_watering_db
     restart: unless-stopped
+    environment:
+      MYSQL_DATABASE: auto_watering_system
+      MYSQL_ROOT_PASSWORD: 123
+    ports:
+      - "3306:3306"
+    depends_on:
+      - mqtt-broker
     volumes:
-      - ./backend:/app
-      - /app/node_modules
+      - mysql_data:/var/lib/mysql
+    networks:
+      - watering_network
 
 networks:
-  watering-network:
+  watering_network:
     driver: bridge
+
+volumes:
+  mysql_data:
+
