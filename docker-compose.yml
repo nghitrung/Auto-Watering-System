@@ -24,9 +24,11 @@ services:
       context: ./backend
     container_name: auto_watering_backend
     restart: unless-stopped
+    ports:
+      - "5000:5000"
     depends_on:
-      - mysql-db
-      - mqtt-broker
+      mysql-db:
+        condition: service_healthy
     networks:
       - watering_network 
     env_file: ./backend/.env
@@ -40,8 +42,11 @@ services:
       MYSQL_ROOT_PASSWORD: 123
     ports:
       - "3306:3306"
-    depends_on:
-      - mqtt-broker
+    healthcheck:
+      test: [ "CMD", "mysqladmin", "ping", "-h", "localhost" ]
+      interval: 5s
+      timeout: 5s
+      retries: 10
     volumes:
       - mysql_data:/var/lib/mysql
     networks:

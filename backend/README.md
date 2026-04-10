@@ -22,7 +22,7 @@ backend/
 2. Initial setup
 ```
 cd backend
-npm install express dotenv sequelize mysql2 mqtt
+npm install express dotenv sequelize mysql2 mqtt cors
 ```
 
 3. Environment configuration 
