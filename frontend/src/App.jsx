@@ -74,7 +74,7 @@ function App() {
         {/* Chart Section */}
         <div className="lg:col-span-2 bg-white rounded-[2rem] p-8 shadow-sm border border-slate-100">
           <h2 className="text-lg font-bold mb-6 italic text-slate-400">Environmental History</h2>
-          <div className="h-350px w-full"> {}
+          <div className="h-80 w-full"> {}
             <ResponsiveContainer width="100%" height="100%">
               <AreaChart data={history}>
                 <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="#f1f5f9" />
